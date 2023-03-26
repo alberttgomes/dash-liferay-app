@@ -8,4 +8,4 @@ ENV MYSQL_PASSWORD=root@123
 
 COPY ./database.sql /docker-entrypoint-initdb.d/
 
-EXPOSE 3306:3309
+EXPOSE 3306 3307 3308 3309
