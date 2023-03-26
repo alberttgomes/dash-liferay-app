@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  database:
+    container_name: liferay-me
+    image: liferay-me
+    
+    build:
+      dockerfile: ./Dockerfile
+
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=lportal-learn
+      - MYSQL_USER=albertlportal
+      - MYSQL_PASSWORD=root@123
+    
+    ports:
+      - '3309:3306'
+      
+    volumes:
+      - ./mysql/config:/etc/mysql/conf.d
+      - ./database.sql:/docker-entrypoint-initdb.d/
