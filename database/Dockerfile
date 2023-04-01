@@ -1,12 +1,19 @@
 FROM mysql:latest
 
-RUN "Init build Dockerfile to database..."
+LABEL key="author" value=${AUTHOR}
 
-ENV MYSQL_ROOT_PASSWORD=root
-ENV MYSQL_USER=albertlportal
-ENV MYSQL_PASSWORD=root@123
+RUN chown -R mysql:root /var/lib/mysql/
 
-COPY ./database.sql /docker-entrypoint-initdb.d/
-COPY ./mysql/config /etc/mysql/conf.d
+ARG MYSQL_DATABASE
+ARG MYSQL_USER
+ARG MYSQL_PASSWORD
+ARG MYSQL_ROOT_PASSWORD
 
-EXPOSE 3306 3307 3308 3309
+ENV MYSQL_DATABASE=$MYSQL_DATABASE
+ENV MYSQL_USER=$MYSQL_USER
+ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
+ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+
+# Copy configuration database to into container
+COPY ./database/database.sql /docker-entrypoint-initdb.d/
+COPY ./database/mysql/config /etc/mysql/conf.d
