@@ -3,7 +3,8 @@
 ARTIFACTS="$LIFERAY_HOME/artifacts"
 
 # Copy artifacts to into deploy folder
-if [ -d $ARTIFACTS ]; then
+if [ -d $ARTIFACTS ] 
+then
     if [ -z "$(ls -A $ARTIFACTS)" ] 
     then
         echo "No files found in the $ARTIFACTS folder"
