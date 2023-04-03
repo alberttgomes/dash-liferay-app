@@ -1,3 +1,3 @@
-# frontend-to-liferay
+# Frontend DASHBOARD APP
 
-Frontend To Liferay
+- How to
