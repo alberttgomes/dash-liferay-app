@@ -5,21 +5,20 @@ services:
   database:
     
     container_name: liferay-database
+    
     build:
       dockerfile: ./database/Dockerfile
     
     image: liferay-database
     command: --authentication-policy=mysql_native_password
     restart: always
-    healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
-      timeout: 10s
-      retries: 10
+
     environment:
       - MYSQL_DATABASE=$MYSQL_DATABASE
       - MYSQL_USER=$MYSQL_USER
       - MYSQL_PASSWORD=$MYSQL_PASSWORD
       - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+
     volumes:
       - ./database/scripts:/docker-entrypoint-initdb.d
     
@@ -30,14 +29,17 @@ services:
   liferay:
     
     container_name: liferay-me
+
     build:
       dockerfile: ./Dockerfile
 
     image: liferay-me
+    
     links:
       - database
     depends_on:
       - database
+   
     ports:
-      - "8000:8000"
-      - "8088:8080"
+      - "${LFR_DEBUG_ENV}:8000"
+      - "${LFR_PORT_ENV}:8080"
