@@ -9,6 +9,6 @@
  * @param  {Object} params a hash with values of interest to the portlet
  * @return {void}
  */
-export default function main({portletNamespace, contextPath, portletElementId, configuration}) {
+export default function main({portletNamespace, contextPath, portletElementId}) {
     
 }
