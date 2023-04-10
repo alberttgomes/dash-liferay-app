@@ -4,12 +4,13 @@ services:
 
   database:
     
-    container_name: liferay-database
+    container_name: dash-database-liferay
     
     build:
-      dockerfile: ./database/Dockerfile
+      context: ./database
+      dockerfile: Dockerfile
     
-    image: liferay-database
+    image: dash-database-liferay-img
     command: --authentication-policy=mysql_native_password
     restart: always
 
@@ -28,15 +29,14 @@ services:
 
   liferay:
     
-    container_name: liferay-me
+    container_name: dash-liferay
 
     build:
-      dockerfile: ./Dockerfile
+      context: .
+      dockerfile: Dockerfile
 
-    image: liferay-me
+    image: dash-liferay
     
-    links:
-      - database
     depends_on:
       - database
    
