@@ -9,5 +9,3 @@ GRANT ALL ON lportal.* TO 'albertlportal'@'127.0.0.1';
 
 /* Make sure the privileges are installed */
 FLUSH PRIVILEGES;
-
-ALTER USER 'albertlportal'@'localhost' IDENTIFIED BY 'pass';
