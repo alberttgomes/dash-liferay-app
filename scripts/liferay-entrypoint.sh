@@ -16,17 +16,6 @@ then
 
         echo "Moving files from $ARTIFACTS to into deploy folder"
         mv -v $ARTIFACTS/*jar $LIFERAY_HOME/deploy/
-
-        # Copying artifacts to document library and deploying the customer .jar on bundles
-        DOCUMENT_LIBRARY=$ARTIFACTS/data/29001
-
-        if [ -d $DOCUMENT_LIBRARY ]
-        then 
-                echo "Moving document library from $ARTIFACTS to data folder..."
-                mv $DOCUMENT_LIBRARY $LIFERAY_HOME/data/document_library/
-        else 
-                echo "Directory $DOCUMENT_LIBRARY not found"
-        fi
     fi
 fi
 
