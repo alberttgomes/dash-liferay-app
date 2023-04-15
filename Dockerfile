@@ -14,7 +14,6 @@ WORKDIR /opt/liferay/
 
 # Copy configuration portal to into container Liferay Portal 7.4
 COPY --chown=liferay:liferay configs/local/portal-ext.properties $LIFERAY_HOME/
-COPY --chown=liferay:liferay frontendash/dist/*.jar $LIFERAY_HOME/artifacts
 COPY --chown=liferay:liferay configs/local/license $LIFERAY_HOME/artifacts/license
 COPY --chown=liferay:liferay scripts/liferay-entrypoint.sh $LIFERAY_HOME/liferay-entrypoint.sh
 
