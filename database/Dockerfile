@@ -13,8 +13,8 @@ ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
 ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
 
 # Copy configuration database to into container
-COPY ./database/scripts/init.sql /docker-entrypoint-initdb.d/
-COPY ./database/mysql/config /etc/mysql/conf.d
+COPY ./scripts/Init.sql /docker-entrypoint-initdb.d/
+COPY ./mysql/config /etc/mysql/conf.d
 
 # Executable to mysql utf8 encoding
 CMD ["mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
