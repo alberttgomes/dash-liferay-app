@@ -63,7 +63,6 @@ export const DashboardTableInfo = ({dashboardItems}: IPropsDashboardTableInfo) =
                                                 <ClayTable.Cell> {data.quantity} </ClayTable.Cell>
                                                    
                                                 <ClayTable.Cell> {data.status} </ClayTable.Cell>
-                                                   
                                         </ClayTable.Row>
                                 );
                     })}
