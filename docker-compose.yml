@@ -23,7 +23,15 @@ services:
     
     ports:
       - "${MYSQL_PORT}:3306"
-      
+
+  app:
+    build: 
+      context: ./frontenddash
+      dockerfile: Dockerfile
+    container_name: app-frontenddash
+    image: app-frontenddash-image
+    ports:
+      - "${LFR_APP_ENV}:5173"
 
   liferay:
     build:
