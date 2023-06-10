@@ -1,0 +1,4 @@
+26-Mar-2023 03:17:50.319 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [272] milliseconds
+26-Mar-2023 03:17:56.725 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+26-Mar-2023 03:17:56.747 SEVERE [main] org.apache.catalina.core.StandardContext.startInternal Context [] startup failed due to previous errors
+26-Mar-2023 03:17:56.774 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [6454] milliseconds
