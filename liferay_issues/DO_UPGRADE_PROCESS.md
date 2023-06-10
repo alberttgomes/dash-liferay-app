@@ -16,7 +16,7 @@
 <p>Understand the architecture to use on new issues of process to keep the consistence, pattern of the code and assurence the working.</p>
 
 <h3>Model of the architecture in diagram</h3>
-<img src="[change to realy path]" alt="architecture-diagram" />
+<img src="artifacts/architecture.jpg" alt="architecture-diagram" />
 
 <h3>Folders architecture</h3>
 <p>For every app of Liferay, has your respective structure of the upgrade process. Generally stay on directory service/internal/upgrade</p>
