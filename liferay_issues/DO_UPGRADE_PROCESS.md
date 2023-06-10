@@ -25,3 +25,14 @@
   - workflow: 
     - workflow/metrics/internal/upgrade
     - analytics/message/storage/internal/upgrade    
+
+
+<h2>Database</h2>
+<p>Understand the concepts of the database relational to execute query in process upgrade.</p>
+
+- examples
+  - select
+  - update
+  - delete
+  - join
+  - alter table   
