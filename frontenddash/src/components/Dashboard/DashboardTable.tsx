@@ -1,6 +1,5 @@
 import ClayTable from '@clayui/table';
 
-
 type DashboardTableInfoTypes = {
     quantity: number
     id: number
@@ -13,7 +12,6 @@ export interface IPropsDashboardTableInfo {
 };
 
 export const DashboardTableInfo = ({dashboardItems}: IPropsDashboardTableInfo) => {
-    
     return(
         <ClayTable 
             className="dsh-dashboard-table-container"
@@ -54,17 +52,14 @@ export const DashboardTableInfo = ({dashboardItems}: IPropsDashboardTableInfo) =
 
                 <ClayTable.Body>
                     {dashboardItems.map((data, index) => {
-                                return (
-                                        <ClayTable.Row key={index}>
-                                                <ClayTable.Cell> {data.titleProduct} </ClayTable.Cell>
-
-                                                <ClayTable.Cell> {data.id} </ClayTable.Cell>
-                                               
-                                                <ClayTable.Cell> {data.quantity} </ClayTable.Cell>
-                                                   
-                                                <ClayTable.Cell> {data.status} </ClayTable.Cell>
-                                        </ClayTable.Row>
-                                );
+                            return (
+                                <ClayTable.Row key={index}>
+                                    <ClayTable.Cell>{data.titleProduct}</ClayTable.Cell>
+                                    <ClayTable.Cell>{data.id}</ClayTable.Cell>
+                                    <ClayTable.Cell>{data.quantity}</ClayTable.Cell>
+                                    <ClayTable.Cell>{data.status}</ClayTable.Cell>
+                                </ClayTable.Row>
+                            );
                     })}
                 </ClayTable.Body>
         </ClayTable>
