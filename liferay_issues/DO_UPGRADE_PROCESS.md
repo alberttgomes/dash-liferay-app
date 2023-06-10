@@ -23,8 +23,8 @@
 
 - examples
   - workflow: 
-    - workflow/metrics/internal/upgrade
-    - analytics/message/storage/internal/upgrade    
+    - portal-workflow-metrics-service/src/main/java/com/liferay/portal/workflow/metrics/internal/upgrade
+    - analytics/analytics-message-storage-service/src/main/java/com/liferay/analytics/message/storage/internal/upgrade    
 
 
 <h2>Database</h2>
