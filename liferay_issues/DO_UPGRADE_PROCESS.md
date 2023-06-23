@@ -9,7 +9,8 @@
 - prepared statement lib
 - java
 - extends classes(UpgradeStepRegistrator and UpgradeProcess)
-- (will be necessary use regex?)
+- regex
+- tests
 
 <br />
 <h2>Architecture</h2>
