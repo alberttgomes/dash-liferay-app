@@ -1,4 +1,4 @@
-# Let me learn!
+# Let me learn
 
 ### Artifacts about the upgrade process of database between versions of Lifaray.
 
